@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <van-image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589390809188&di=bf5864b83a17110dfe2dda73a9868025&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw650h650%2F20180306%2FzX3N-fxipenn8549419.jpg" width="100" height="100" />
+    <text id="login">Login</text>
+      <van-input bindblur="bindUsernameInput" label="用户名" placeholder="请输入用户名"/>
+      <van-input bindblur="bindPasswordInput" password="true" label="密码" placeholder="请输入密码"/>
+  </view>
+  <view style="width:15rem; height:6rem; margin: 5rem 0 " >
+      <van-button bindtap="login" type="primary" block>登录</van-button>
+  </view>
+</view>

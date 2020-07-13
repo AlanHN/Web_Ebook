@@ -1,0 +1,10 @@
+<!--pages/order/order.wxml-->
+<view>
+	<view>
+			<van-cell-group border wx:for="{{orders}}" wx:for-item="list" title = "list:{{list.listId}} time:{{list.time}}" >
+				<van-cell wx:for="{{list.items}}" wx:for-item="item" title="{{item.book.title}}" value="x{{item.bookNumber}}" label="￥{{item.bookPrice}}" border="{{ false }}" />
+			</van-cell-group>
+	</view>
+  <view class='placeholder-view'></view>
+	<tabbar active="2" />
+</view>

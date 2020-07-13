@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/book/book",
+    "pages/bookDetail/bookDetail",
+    "pages/cart/cart",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search",
+    "van-goods-action": "@vant/weapp/goods-action",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon",
+    "van-goods-action-button": "@vant/weapp/goods-action-button",
+    "van-overlay": "@vant/weapp/overlay",
+    "van-tabbar": "@vant/weapp/tabbar",
+    "van-tabbar-item": "@vant/weapp/tabbar-item",
+    "tabbar": "/component/tabbar/tabbar"
+  }
+}

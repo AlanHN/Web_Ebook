@@ -1,0 +1,5 @@
+/* pages/order/order.wxss */
+.placeholder-view {
+  width: 100%;
+  height: 150rpx;
+}

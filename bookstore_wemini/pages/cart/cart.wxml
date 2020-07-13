@@ -1,0 +1,28 @@
+<!--pages/cart.wxml-->
+<view>
+	<view>
+		<block wx:for="{{cart}}" wx:for-item="item">
+			<van-cell title="{{item.book.title}}" value="x{{item.bookNumber}}" label="￥{{item.bookPrice}}" border="{{ false }}" />
+			<van-row>
+				<van-col span="8">
+					<van-button plain bindtap="minusOne" data-item='{{item}}'>-</van-button>
+				</van-col>
+				<van-col span="8">
+					<van-button plain bindtap="addOne" data-item='{{item}}'>+</van-button>
+				</van-col>
+				<van-col span="8">
+					<van-button bindtap="deleteItem" data-item='{{item}}' type="danger">delete</van-button>
+				</van-col>
+			</van-row>
+		</block>
+	</view>
+	<view class='placeholder-view'></view>
+	<view>
+		<van-button class="buyAll" bindtap="buyAll" data-cartItems='{{items}}' type="warning">立即购买</van-button>
+		<text>￥{{sum}}</text>
+	</view>
+	<view class='placeholder-view'></view>
+	<view>
+		<tabbar active="1" />
+	</view>
+</view>

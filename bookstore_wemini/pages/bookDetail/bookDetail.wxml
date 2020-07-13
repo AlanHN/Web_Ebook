@@ -1,0 +1,32 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<view>
+	<view>
+		<van-image width="18rem" height="18rem" fit="contain" src="{{book.image}}" />
+		<van-cell-group>
+			<van-cell title="书名" value="{{book.title}}" />
+			<van-cell title="作者" value="{{book.author}}" />
+			<van-cell title="分类" value="{{book.type}}" />
+			<van-cell title="定价" value="{{book.price}}" />
+			<van-cell title="存量" value="{{book.stock}}" />
+			<van-cell title="简介" value="{{book.description}}" />
+		</van-cell-group>
+	</view>
+
+	<view>
+	<van-goods-action fixed="true">
+		<van-goods-action-button text="加入购物车" type="warning" bindtap="clickAddCart" />
+		<van-goods-action-button text="立即购买" bindtap="clickBuy" />
+	</van-goods-action>
+  </view>
+	
+	<van-dialog use-slot title="加入购物车" show="{{ addCartShow }}" show-cancel-button bind:close="Dialog.close" bind:confirm="addCart" close-on-click-overlay>
+		<van-image width="18rem" height="18rem" fit="contain" src="{{book.image}}" />
+		<van-stepper value="{{ 1 }}" bind:change="changeValue" />
+	</van-dialog>
+
+	<van-dialog use-slot title="立即购买" show="{{ buyShow }}" show-cancel-button bind:close="Dialog.close" bind:confirm="buyNow" close-on-click-overlay>
+		<van-image width="18rem" height="18rem" fit="contain" src="{{book.image}}" />
+		<van-stepper value="{{ 1 }}" bind:change="changeValue" />
+	</van-dialog>
+
+</view>

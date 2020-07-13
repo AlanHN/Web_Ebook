@@ -1,0 +1,33 @@
+<!--pages/book/book.wxml-->
+<view>
+	<view>
+				<view style="position: -webkit-sticky;">
+					<van-search value="{{searchValue}}" placeholder="请输入书名" use-action-slot bind:change="searchChange" bind:search="onSearch" bind:cancel="searchCancel">
+					</van-search>
+				</view>
+				<view>
+					<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='3000' duration='1000' circular='true'>
+						<block wx:for="{{carouselImgUrls}}" wx:for-index="index">
+							<swiper-item>
+								<image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+							</swiper-item>
+						</block>
+					</swiper>
+				</view>
+				<view>
+					<van-notice-bar text="----- 开业大酬宾！！！陈老师的学生八折优惠！！！优惠码：CJNB -----" />
+				</view>
+				<view style="display:flex; justify-content:space-around; flex-wrap:wrap;">
+					<block wx:for="{{showBooks}}" wx:for-item="book">
+						<view style="width:9rem; height:12rem;text-align:center">
+							<van-image bindtap="bindViewTap" data-book='{{book}}' width="9rem" height="9rem" fit="contain" src="{{book.image}}" />
+							<text>{{book.title}}</text>
+						</view>
+					</block>
+				</view>
+	</view>
+	<view class='placeholder-view'></view>
+	<view>
+	<tabbar active= "0" />
+	</view>
+</view>
